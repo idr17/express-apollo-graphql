@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const { makeExecutableSchema } = require('graphql-tools');
 
-const typeDefs = require('../src/schema/types')
-const resolvers = require('../src/schema/resolvers')
+const typeDefs = require('./schema/types')
+const resolvers = require('./schema/resolvers/rootResolvers')
 
 // Put together a schema
 const schema = makeExecutableSchema({
@@ -21,7 +21,4 @@ app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
-// Start the server
-app.listen(3000, () => {
-  console.log('Go to http://localhost:3000/graphiql to run queries!');
-});
+module.exports = app
