@@ -1,15 +1,23 @@
 {
-  "name": "apollo",
+  "name": "Apollo graphql express js",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple and very basic graphql concept about schema, query and mutation. Deeveloped using express js, graphql, apollo and jsonplaceholder fake API",
+  "main": "src/server.js",
   "scripts": {
     "start": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["graphql", "express js", "apollo", "apollo express graphql"],
+  "author": "indera.allezz@gmail.com",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idr17/express-apollo-graphql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idr17/express-apollo-graphql/issues"
+  },
+  "homepage": "https://github.com/idr17/express-apollo-graphql#readme",
   "dependencies": {
     "apollo-server": "^2.9.9",
     "apollo-server-express": "^1.4.0",

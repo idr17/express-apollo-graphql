@@ -1,8 +1,9 @@
-const posts = require('./posts')
-const comments = require('./comments')
+const { postQuery, postMutation } = require('./posts')
+const { commentQuery } = require('./comments')
 
 const resolvers = {
-	Query: { ...posts, ...comments },
+	Query: { ...postQuery, ...commentQuery },
+	Mutation: { ...postMutation}
 };
 
 module.exports = resolvers

@@ -5,9 +5,14 @@ type Query {
   posts: [Post],
   post(id:ID!): Post,
   comments: [Comment],
-  comment(postid:ID!): [Comment]
+  comment(postid:ID!): [Comment] 
   commentbyid(commentid:ID!): Comment
  }
+ type Mutation {
+  createpost(title: String!, body: String!, userId: Int!): Post,
+  updatepost(id: Int!, title: String!, body: String!, userId: Int!): Post
+  deletepost(id: Int!): Message
+ },
 type Post { 
   id: Int!, 
   userId: Int,
@@ -20,6 +25,10 @@ type Comment {
   name: String,
   email: String,
   body: String
+},
+type Message {
+  message: String,
+  status: Int
 }
 `;
 

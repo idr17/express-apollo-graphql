@@ -1,0 +1,38 @@
+# query {
+#   commentbyid(commentid:1){
+#     postId
+#     body
+#     email
+#     id
+#   }
+# }
+
+# query {
+#   posts {
+#     id
+#   }
+# }
+
+# mutation {
+#   createpost(title:"nama saya siapa", body:"ini body budi", userId:1){
+#     id
+#     userId
+#     title
+#     body
+#   }
+# }
+
+# mutation {
+#   updatepost(id: 1, title:"nama saya siapa", body:"ini body budi", userId:1){
+#     userId
+#     title
+#     body
+#   }
+# }
+
+# mutation {
+#   deletepost(id:3){
+#     message
+#     status
+#   }
+# }
