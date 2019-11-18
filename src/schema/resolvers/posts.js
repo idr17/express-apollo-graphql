@@ -21,12 +21,12 @@ const mutation = {
 		return data
 	},
 	updatepost: async (root, { id, title, body, userId }) => {
-		const result = await axios.put(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+		const { data } = await axios.put(`https://jsonplaceholder.typicode.com/posts/${id}`, {
 			'title': title,
 			'body': body,
 			'userId': userId
 		})
-		return result.data
+		return data
 	},
 	deletepost: async (root, {id}) => {
 		const { status } = await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
